@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Dennis Stassen 906208">
+  <title>Numerical simulation: Presentation of old assignment</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Numerical simulation: Presentation of old assignment</h1>
+  <h2 class="author">Dennis Stassen 906208</h2>
+</section>
+<section id="TOC">
+<ul>
+<li><a href="#/exercise-a">Exercise A</a></li>
+<li><a href="#/exercise-b">Exercise B</a></li>
+</ul>
+</section>
+
+<section><section id="exercise-a" class="titleslide slide level1"><h1>Exercise A</h1></section><section id="i" class="slide level2">
+<h1>i</h1>
+<p>Assume a Diamond model as described in the reader where the consumer has preferences <span class="math inline">\(U_t=c^y_tc^o_{t+1}\)</span>, there is no technological progress and production is described by <span class="math inline">\(y_t=k^\alpha\)</span>.*</p>
+<p>Compute the capital-labour ratio in the steady state. What is the effect of an increase in <span class="math inline">\(\alpha\)</span> on the steady-state capital-labour ratio?</p>
+<p>In accordance with the reader the budget constraints in both periods of an individual are defined as: <span class="math display">\[c^y_t=w_t-s_t\]</span> <span class="math display">\[c^o_{t+1}=(1+r_{t+1})s_t\]</span> Then the lifetime budget constraint is expressed as: <span class="math display">\[w_t=c^y_t + \frac{1}{1+r}c^o_{t+1}\]</span> Hence, <span class="math inline">\(U_t=(w_t-s_t)((1+r_{t+1})s_t)\)</span>. We take the first order condition of this function with respect to <span class="math inline">\(s\)</span>, <span class="math inline">\(\frac{\partial U}{\partial s_t}=0\)</span>. <span class="math display">\[\begin{aligned}
+U_t&#39;=&amp;0 \\
+\leftrightarrow&amp; (w_t-s_t)(1+r_{t+1})-((1+r_{t+1})s_t)=0 \\
+\leftrightarrow&amp; w_t+w_tr_{t+1}-s_t-s_tr_{t+1}-s_t-s_tr_{t+1}=0 \\
+\leftrightarrow&amp; 2s_t+2s_tr_{t+1}=w_t+w_tr_{t+1} \\
+\leftrightarrow&amp; 2s_t(1+r_{t+1})=w_t(1+r_{t+1}) \\
+\leftrightarrow&amp; 2s_t=w_t \\\end{aligned}\]</span> <span class="math display">\[s_t=\frac{w_t}{2}\]</span></p>
+</section><section id="i-1" class="slide level2">
+<h1>i</h1>
+<p>Since a standard neoclassical production function is assumed, marginal products equal factor prices and clearly: <span class="math display">\[w_t=f(k_t)-k_tf&#39;k_t)\]</span> <span class="math display">\[r_t=f&#39;(k)-\delta\]</span> Every young person works one time unit in the economy. Thus, <span class="math inline">\(L_t=N_t\)</span>. Since capital is the only asset it is implied that: <span class="math display">\[F(K_t,L_t)=N_tc^y_t+N_{t-1}c^o_t+I_t\]</span> where <span class="math inline">\(I_t\)</span> is gross investment and equal to <span class="math inline">\(K_{t+1}-(1-\delta)K_t\)</span>, so: <span class="math display">\[F(K_t,L_t)=N_tc^y_t+N_{t-1}c^o_t+K_{t+1}-(1-\delta)K_t\]</span> Since <span class="math inline">\(F(K_t,L_t)\)</span> equals the sum of the marginal products this can be rewritten as: <span class="math display">\[w_tN_t+(r_t+\delta)K_t=N_tc^y_t+N_{t-1}c^o_t+K_{t+1}-(1-\delta)K_t\]</span> Using the budget constraints (1) and (2) we derive: <span class="math display">\[\begin{aligned}
+&amp;w_tN_t+(r_t+\delta)K_t=N_t(w_t-s_t)+N_{t-1}((1+r_{t})s_{t-1})+K_{t+1}-(1-\delta)K_t \\
+\leftrightarrow&amp; w_tN_t+r_tK_t+\delta K_t=N_tw_t-N_ts_t+N_{t-1}s_{t-1}+N_{t-1}r_{t}s_{t-1}+K_{t+1}-K_t+\delta K_t \\
+\leftrightarrow&amp;K_{t+1}=N_ts_t-N_{t-1}s_{t-1}-N_{t-1}r_{t}s_{t-1}+K_t+r_tK_t\end{aligned}\]</span> This can only hold if <span class="math inline">\(K_{t}=N_{t-1}s_{t-1}\)</span> and likewise <span class="math inline">\(r_tK_t=N_{t-1}r_{t}s_{t-1}\)</span>. We then get: <span class="math display">\[K_{t+1}=N_ts_t-0=N_ts_t\]</span></p>
+</section><section id="i-2" class="slide level2">
+<h1>i</h1>
+<p>Since <span class="math inline">\(N_t=L_t\)</span> equation (10) is equivalent to <span class="math display">\[K_{t+1}=s_tL_t\]</span></p>
+<p>Now, <span class="math inline">\((1+g)\)</span> is defined as <span class="math inline">\(L_{t+1}/L_t\)</span>, hence:</p>
+<p><span class="math display">\[\begin{aligned}
+&amp; K_{t+1}=s_tL_t \\
+&amp; \leftrightarrow \frac{K_{t+1}}{L_{t+1}}=s_t\frac{L_t}{L_{t+1}} \\
+&amp; \leftrightarrow \frac{K_{t+1}}{L_{t+1}}=\frac{s_t}{L_{t+1}/L_{t}}\end{aligned}\]</span></p>
+<p><span class="math display">\[k_{t+1}=\frac{s_t}{1+g}\]</span></p>
+</section><section id="i-3" class="slide level2">
+<h1>i</h1>
+<p>Combining this result with (4) and (5) leads to: <span class="math display">\[k_{t+1}=\frac{f(k_t)-k_tf&#39;k_t}{2(1+g)}\]</span> We know that in the steady state, per definition, the change in capital stock (<span class="math inline">\({k_{t+1}}-{k_t}\)</span>) equals zero, or likewise <span class="math inline">\(k_{t+1}=k_t\)</span>. Using the production function as described in the assignment (13) boils down to: <span class="math display">\[\begin{aligned}
+k&amp;=\frac{k^\alpha-k\alpha k^{\alpha-1}}{2(1+g)} \\
+k&amp;=\frac{k^\alpha-\alpha k^{\alpha-1+1}}{2(1+g)} \\
+k&amp;=\frac{k^\alpha-\alpha k^{\alpha}}{2(1+g)} \\
+k&amp;=\frac{(1-\alpha) k^\alpha}{2(1+g)} \\
+\frac{k}{k^\alpha}&amp;=\frac{(1-\alpha)}{2(1+g)}\\
+k^{1-\alpha}&amp;=\frac{(1-\alpha)}{2(1+g)}\\\end{aligned}\]</span> <span class="math display">\[k^*=\frac{(1-\alpha)}{2(1+g)}^{\frac{1}{1-\alpha}} \\\]</span></p>
+</section><section id="i-4" class="slide level2">
+<h1>i</h1>
+<p>Equation (14) describes the capital labour ratio in the steady state. Now let’s see how k is dependent on <span class="math inline">\(\alpha\)</span>. If <span class="math inline">\(\alpha\)</span> increases, the term <span class="math inline">\(1-\alpha\)</span> decreases. This has an effect on <span class="math inline">\(k\)</span> through two channels. First, through the nominator: <span class="math inline">\((1-\alpha)\)</span>. Secondly, through the power: <span class="math inline">\(\frac{1}{1-\alpha}\)</span>. As stated above when <span class="math inline">\(\alpha\)</span> increases, the nominator decreases. The power increases, and since <span class="math inline">\(0&lt;\alpha&lt;1\)</span> and thus <span class="math inline">\(\frac{1-\alpha}{2(1+g)}&lt;1\)</span> the increase of the power is negatively related with <span class="math inline">\(k\)</span> as well. Thus, an increase in <span class="math inline">\(\alpha\)</span> would result in a decrease of <span class="math inline">\(k\)</span>. This also seems intuitively correct; if capital has a higher rate of return the capital-labour ratio in the steady state is lower.</p>
+</section><section id="ii" class="slide level2">
+<h1>ii</h1>
+<p><em>ii. Suppose the government introduces a tax τ on interest income. All revenues of this tax are transferred to the elderly in the same period as a pension benefit. So the budget constraints become:</em></p>
+<p><span class="math display">\[\begin{aligned}
+c^y_t&amp;=w-s_t \\
+c^o_{t+1}&amp;=(1+(1-\tau)r)s_t+T\end{aligned}\]</span></p>
+<p><em>Note that the level of the pension benefit T is given for the individual and cannot be affected by saving more or less. Derive the Euler equation.</em><br />
+<br />
+ii --------</p>
+<p>Given the budget constraint as defined by (15) and (16) the utility function can be written as <span class="math display">\[U_t=(w-s_t)((1+(1-\tau)r)s_t+T)\]</span></p>
+<p>The Euler equation is defined as the ratio of partial derivatives with respect to savings of consumption when old and consumption when young. Define <span class="math inline">\(u(c^y_t) = w-s_t\)</span> and <span class="math inline">\(u(c^o_{t+1}) = (1+(1-\tau)r)s_t+T\)</span>. Such that <span class="math inline">\(U_t=u(c^y_t)u(c^o_{t+1})\)</span>. Hence:</p>
+<p><span class="math display">\[\frac{u&#39;(c^y_t)s_t}{u&#39;(c^o_{t+1})s_t}=\frac{-1}{(1+(1-\tau)r}\]</span></p>
+</section><section id="iii" class="slide level2">
+<h1>iii</h1>
+<p><em>Derive the effect of a marginal increase in the tax rate <span class="math inline">\(\tau\)</span> (starting from <span class="math inline">\(\tau=0\)</span>) on lifetime utility, assuming that the pension benefit is adjusted (i.e. assuming that <span class="math inline">\(T = \tau rs\)</span> but that the individual does not take this into account when deciding how much to save). Interpret your answer.</em></p>
+<p><span class="math display">\[\begin{aligned}
+\frac{\partial U}{\partial s_t}&amp;=(w-s_t)(1+r-\tau r)-(1+(1-\tau)r)s_t-T=0 \\
+&amp;\leftrightarrow w(1+r-\tau r)-s_t-s_t r +s_t \tau r -s_t -s_t r + s_t \tau r -T =0 \\
+2s_t+2s_t r-2s_t \tau r &amp;=w(1+r-\tau r)-T \\
+2s_t(1+r-\tau r)&amp;=w(1+r-\tau r) -T \\
+2s_t&amp;=w-\frac{T}{1+r-\tau r)}\\\end{aligned}\]</span></p>
+<p><span class="math display">\[s_t=\frac{w-\frac{T}{1+r-\tau r)}}{2}\]</span></p>
+</section><section id="iii-1" class="slide level2">
+<h1>iii</h1>
+<p><br />
+The marginal effect of <span class="math inline">\(\tau\)</span> starting from <span class="math inline">\(\tau=0\)</span> is equal to the difference of the derivative of the lifetime utility functions including and excluding <span class="math inline">\(\tau\)</span>. Combining equations (4) and (19) gives us the marginal effect of <span class="math inline">\(\tau\)</span>, when it is initially zero:</p>
+<p><span class="math display">\[\delta s_t = \frac{w}{2} - \frac{w-\frac{T}{1+r-\tau r)}}{2}\]</span></p>
+<p>Substituting <span class="math inline">\(T=\tau r s\)</span>: <span class="math display">\[\delta s_t = \frac{w}{2} - \frac{w-\frac{\tau r s}{1+r-\tau r)}}{2}\]</span><br />
+When we introduce a tax that is paid out to the elderly we observe that people will save less income. The problem is that when everyone saves less this will lower the benefit in the end. People have thus disincentives to save which has a negative effect on the benefits paid out (<span class="math inline">\(\tau r s\)</span>).</p>
+</section></section>
+<section><section id="exercise-b" class="titleslide slide level1"><h1>Exercise B</h1></section><section id="i-5" class="slide level2">
+<h1>i</h1>
+<p><em>Assume a Solow-Swan model as described in the reader, with a Cobb-Douglas production function <span class="math inline">\(Y =1.5K^{0.5} \tilde{L}^{0.5}\)</span> and <span class="math inline">\(x = 0.5, n = 0.5, \delta = 0.25, \sigma = 0.5\)</span>.</em></p>
+<p><em>Compute the capital-labour ratio <span class="math inline">\(\tilde{k}\)</span> in the steady state.</em></p>
+<p>We know that <span class="math inline">\(1+g=(1+x)(1+n)\)</span> so <span class="math inline">\(1+g=(1.5^2)=2.25\)</span>. Since the production function features CRS we also know that we can write it in intensive form as <span class="math inline">\(y=1.5k^{0.5}\)</span>. In the steady state we know that depreciation equals investment and hence that the capital labour ratio is constant. Therefore, we use and put it equal to zero.</p>
+<p><span class="math display">\[\begin{aligned}
+\frac{\sigma f(k_t) -(\delta+g)k_t}{1+g} &amp;= 0 \rightarrow \\
+\frac{\sigma 1.5k_t^{0.5} -(\delta+g)k_t}{1+g} &amp;= 0 \rightarrow \\
+\sigma 1.5k_t^{0.5} -(\delta+g)k_t &amp;= 0 \rightarrow \\
+\sigma 1.5k_t^{0.5} -\delta k_t - g k_t &amp;= 0 \rightarrow \\
+0.5 \times 1.5k_t^{0.5} -0.25k_t - 1.25k_t &amp;= 0 \rightarrow \\
+0.75k_t^{0.5} -0.25k_t - 1.25k_t &amp;= 0 \rightarrow \\
+0.25k_t(3k^{-0.5}-1-5)&amp;=0 \rightarrow \\ \\
+k=0 \vee 3k^{-0.5}-1-5&amp;=0 \rightarrow \\
+k=0 \vee 3k^{-0.5}&amp;=6 \rightarrow \\
+k=0 \vee k^{-0.5}&amp;=2 \rightarrow \\
+k^*=0 \vee k^*=\sqrt[-0.5]2&amp;=0.25\end{aligned}\]</span></p>
+</section><section id="ii-1" class="slide level2">
+<h1>ii</h1>
+<p><em>Is this steady state dynamically efficient or dynamically inefficient?</em></p>
+<p>For this question to answer we first need to derive the golden rule steady state level and compare this to the previous found level of <span class="math inline">\(k^*=0.25\)</span>. <span class="math display">\[\begin{aligned}
+f(k) &amp;=1.5k^{0.5}\\
+f&#39;(k) -\delta - g &amp;=0 \rightarrow \\
+0.75k^{-0.5} -0.25 - 1.25 &amp;=0 \rightarrow \\
+0.75k^{-0.5} &amp;=1.5 \rightarrow \\
+k^{-0.5} &amp;=2 \rightarrow \\
+k_{GR} &amp;= 0.25\end{aligned}\]</span> We see that the capital level of the golden rule equals the capital level of the current steady state. This means that this steady state is dynamically efficient.</p>
+</section><section id="iii-2" class="slide level2">
+<h1>iii</h1>
+<p><em>What is the effect of a decrease in population growth from <span class="math inline">\(n = 0.5\)</span> to <span class="math inline">\(n = 0\)</span> on the steady-state capital-labour ratio?</em></p>
+<p>Since <span class="math inline">\(n\)</span> changes to 0, <span class="math inline">\(g=0.5\)</span>. Using the same derivation as in question (i) we find:</p>
+<p><span class="math display">\[\begin{aligned}
+\sigma 1.5k_t^{0.5} -\delta k_t - g k_t &amp;= 0 \rightarrow \\
+0.75k_t^{0.5} - 0.25 k_t - 0.5 k_t &amp;=0 \rightarrow \\
+0.25k_t(3k^{-0.5}-1-2)&amp;=0 \rightarrow \\ \\
+k=0 \vee 3k^{-0.5}-1-2&amp;=0 \rightarrow \\
+k=0 \vee 3k^{-0.5}&amp;=3 \rightarrow \\
+k=0 \vee k^{-0.5}&amp;=1 \rightarrow \\
+k^{**}=0 \vee k^{**}=\sqrt[-0.5]1&amp;=1\end{aligned}\]</span></p>
+<p>Hence, the steady state capital-labour ratio increases with 0.75.</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
